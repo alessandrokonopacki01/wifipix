@@ -1,0 +1,91 @@
+l
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#091424">
+  <meta name="description" content="WiFi Pix - Internet por tempo">
+  <title>WiFi Pix | Conecte-se</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <div class="logo" aria-hidden="true">⌁</div>
+      <h1>WiFi <span>Pix</span></h1>
+      <p class="subtitle">
+        Internet rápida, do seu jeito.
+        Escolha um plano e pague pelo Pix.
+      </p>
+    </header>
+
+    <section class="panel">
+      <div class="eyebrow">Bem-vindo à rede</div>
+      <h2>Escolha seu plano</h2>
+      <p class="hint">
+        Selecione por quanto tempo deseja navegar.
+      </p>
+
+      <div class="plans" id="plans"></div>
+
+      <button class="action" id="continue">
+        Continuar para o Pix →
+      </button>
+
+      <div class="notice">
+        🔒 Não solicitamos senhas de bancos,
+        e-mails ou redes sociais.
+      </div>
+    </section>
+
+    <footer>
+      WiFi Pix • Versão de demonstração
+    </footer>
+  </main>
+
+  <!-- JANELA DE PAGAMENTO -->
+
+  <div class="dialog-backdrop" id="backdrop">
+    <section class="dialog" role="dialog"
+             aria-modal="true"
+             aria-labelledby="payment-title">
+
+      <div class="dialog-head">
+        <h2 id="payment-title">Pagar com Pix</h2>
+        <button class="close" id="close"
+                aria-label="Fechar">×</button>
+      </div>
+
+      <div class="chosen">
+        <span id="chosen-duration"></span>
+        <strong id="chosen-price"></strong>
+      </div>
+
+      <label class="pix-label" for="pix-code">
+        Pix Copia e Cola
+      </label>
+
+      <textarea id="pix-code" readonly
+        placeholder="Código Pix ainda não configurado">
+      </textarea>
+
+      <p class="pix-hint" id="pix-message">
+        O código Pix será exibido aqui.
+      </p>
+
+      <button class="action copy" id="copy" disabled>
+        Copiar código Pix
+      </button>
+
+      <button class="dismiss" id="back">
+        ← Escolher outro plano
+      </button>
+
+    </section>
+  </div>
+
+</body>
+</html>
